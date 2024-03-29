@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "994ebb4e-ca89-4ea5-ba6f-ea794bd760f1",
+      "title": "Studying clean architecture",
+      "done": true
+    },
+    {
+      "id": "720fe727-47b4-4860-989c-6ddf11edae17",
+      "title": "Studying Angular and best practices",
+      "done": false
+    },
+    {
+      "id": "cb57e56c-f4ec-4fc4-bee9-a08c61283897",
+      "title": "Watching Rodrigo Branas",
+      "done": true
+    },
+    {
+      "id": "4c8e3a4a-2783-45d4-9599-1312a78f0f11",
+      "title": "Watching Andrew Rosario",
+      "done": true
+    }
+  ]
+}

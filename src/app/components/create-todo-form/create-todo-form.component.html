@@ -1,0 +1,15 @@
+<div class="flex gap-3">
+  <input
+    class="bg-neutral-800 p-2 w-full rounded text-neutral-300 placeholder:text-neutral-600 focus:outline-none"
+    [formControl]="createTodo"
+    type="text"
+    placeholder="Adicione uma nova tarefa"
+  />
+  <button
+    class="flex items-center justify-center gap-1 rounded bg-blue-500 p-2"
+    [disabled]="createTodo.invalid"
+    (click)="value.emit(createTodo.value)"
+  >Criar
+    <ng-icon name="heroPlusCircle"></ng-icon>
+  </button>
+</div>
