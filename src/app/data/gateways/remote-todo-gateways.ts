@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { TodoGateway } from '../../domain/gateways/todos-gateway';
 
 import Todo from '../../domain/entities/todo';
-import { environment } from '../../../../environments/environments';
+import { environment } from '../../../environments/environments';
 
 @Injectable({
   providedIn: 'root',

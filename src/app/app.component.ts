@@ -1,18 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { CreateTodoUseCase } from './core/application/use-cases/create-todo.usecase';
-import { ToggleDoneUseCase } from './core/application/use-cases/toggle-done.usecase';
-import { DataModule } from './core/data/data.module';
-import { TodoState } from './core/application/states/todo.state';
-import { ListTodosUseCase } from './core/application/use-cases/list-todos.usecase';
-import { ComponentsModule } from './components/components.module';
-import { RemoveTodoUseCase } from './core/application/use-cases/remove-todo.usecase';
 import { FormControl, Validators } from '@angular/forms';
+import { ApplicationModule } from './application/application.module';
+import { ComponentsModule } from './components/components.module';
+import { DataModule } from './data/data.module';
+import { TodoList } from './domain/entities/todo-list';
+import { ListTodosUseCase } from './application/use-cases/list-todos.usecase';
+import { CreateTodoUseCase } from './application/use-cases/create-todo.usecase';
+import { ToggleDoneUseCase } from './application/use-cases/toggle-done.usecase';
+import { RemoveTodoUseCase } from './application/use-cases/remove-todo.usecase';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, DataModule, ComponentsModule],
+  imports: [CommonModule, DataModule, ComponentsModule, ApplicationModule],
   providers: [],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -23,7 +24,7 @@ export class AppComponent implements OnInit {
   title = 'angular-clean-arch';
 
   constructor(
-    public state: TodoState,
+    public state: TodoList,
     public listTodos: ListTodosUseCase,
     public createTodo: CreateTodoUseCase,
     public toggleDone: ToggleDoneUseCase,

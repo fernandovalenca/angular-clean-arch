@@ -6,7 +6,7 @@ import {
   ChangeDetectionStrategy,
 } from '@angular/core';
 
-import Todo from '../../core/domain/entities/todo';
+import Todo from '../../domain/entities/todo';
 
 @Component({
   selector: 'app-todo',
