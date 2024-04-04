@@ -1,14 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ApplicationModule } from './application/application.module';
-import { ComponentsModule } from './components/components.module';
+
 import { DataModule } from './data/data.module';
+
 import { TodoList } from './domain/entities/todo-list';
+
+import { ApplicationModule } from './application/application.module';
 import { ListTodosUseCase } from './application/use-cases/list-todos.usecase';
 import { CreateTodoUseCase } from './application/use-cases/create-todo.usecase';
 import { ToggleDoneUseCase } from './application/use-cases/toggle-done.usecase';
 import { RemoveTodoUseCase } from './application/use-cases/remove-todo.usecase';
+
+import { ComponentsModule } from './components/components.module';
 
 @Component({
   selector: 'app-root',
@@ -33,9 +37,5 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.listTodos.execute();
-  }
-
-  create() {
-    this.createTodo.execute('Novo to-do');
   }
 }
